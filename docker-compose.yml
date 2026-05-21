@@ -1,0 +1,38 @@
+version: "3.9"
+
+services:
+  db:
+    image: mysql:8
+    container_name: kepler-db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: kepler
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./database:/docker-entrypoint-initdb.d
+
+  ground:
+    build: ./ground-ocaml
+    container_name: ground
+    depends_on:
+      - db
+
+  atlas:
+    build: ./atlas-java
+    container_name: atlas
+    depends_on:
+      - ground
+      - db
+
+  hermes:
+    build: ./hermes-haskell
+    container_name: hermes
+    depends_on:
+      - atlas
+
+  voyager:
+    build: ./voyager-prolog
+    container_name: voyager
+    depends_on:
+      - hermes
