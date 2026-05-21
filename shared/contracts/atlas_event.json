@@ -1,0 +1,24 @@
+{
+  "event_id": "EVT-2041-9982",
+  "priority": "MAX_ALERT",
+  "agency_owner": "Consorcio Internacional Kepler",
+  "active_missions_count": 140,
+  "traceability_path": "VOYAGER-IX -> HERMES-01 -> ATLAS-STATION-04",
+  "transmission_status": "ENRICHED_AND_VERIFIED",
+  "timestamp_atlas_utc": "2041-05-11T12:10:15Z",
+  "data_package": {
+    "origin": "VOYAGER-IX",
+    "verified_by": "HERMES-01",
+    "integrity_hash": "7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069",
+    "observation": {
+      "anomaly_type": "GEOMETRIC_STRUCTURE",
+      "coordinates": {
+        "ascension": "19h 42m 32s",
+        "declination": "+44° 16′ 48″"
+      },
+      "spectral_data": "H2O-LIQUID-CONFIRMED",
+      "confidence": 0.98,
+      "inference_chain": "Rule_Geology_4 -> Rule_Symmetry_Check_8 -> Result_Non_Natural"
+    }
+  }
+}

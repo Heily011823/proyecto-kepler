@@ -1,0 +1,20 @@
+{
+  "mission_id": "VOYAGER-IX",
+  "satellite_id": "HERMES-01",
+  "status": "VERIFIED",
+  "payload": {
+    "anomaly_id": "ANOM-442B-01",
+    "coordinates": {
+      "ascension": "19h 42m 32s",
+      "declination": "+44° 16′ 48″"
+    },
+    "spectral_reading": "H2O-DETECTED-L6",
+    "confidence_level": 0.98,
+    "rules_path": "geology_rule_14 -> natural_formation_mismatch -> anomaly_detected",
+    "voyager_timestamp": "2041-05-11T12:00:00Z"
+  },
+  "integrity": {
+    "hash_sha256": "7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069",
+    "verification_timestamp": "2041-05-11T12:05:30Z"
+  }
+}
